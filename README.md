@@ -1,7 +1,7 @@
 # Flex
 Flex is an insurance project that can help you get cashbacks if you spend money and have been covered for a minimum of 90 days. 
 
-#### 31st Octiber 2022
+#### 31st October 2022
 
 
 ## Technologies
@@ -9,7 +9,7 @@ The technologies used this far:
 * HTML
 * CSS (jQuery v3.3.1, mdBootstrap)
 * JavaScript
-* Node.js 16+
+* Node.js 16.13 or later
 * Express.JS
 * Git
 * GitHub
@@ -26,7 +26,7 @@ The technologies used this far:
 * Create a database
 * Create a table
 * Add data (optional)
-* Install the Xata CLI globally (requires Node.js 16+)
+* Install the Xata CLI globally (requires Node.js 16.13 or later)
 * Create a Xata client to query your database
 * Set up your Node.js runtime to read your API key
 * Query the database - use the Xata web interface to generate queries
