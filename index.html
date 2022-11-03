@@ -5,40 +5,43 @@
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<title>Document</title>
-    <script src = "https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" type = "text/javascript"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/knockout/knockout-3.1.0.js" type="text/javascript">
+	</script>
 </head>
 <body>
-	<!-- This is a *view* - HTML markup that defines the appearance of your UI -->
-
 	<p>First name: <input data-bind="value: firstName"></p>
 	<p>Last name: <input data-bind="value: lastName"></p>
 	<button data-bind="click: seeUser">Check status</button> 
 	<script>
-	   // This is a simple *viewmodel* - JavaScript that defines the data and behavior of your UI
-	function AppViewModel() {
-	   this.firstName = ko.observable("first_name");
-	   this.lastName = ko.observable("last_name");
+	      
+	   function OurViewModel() {
+	      this.firstName = ko.observable("first_name");
+	      this.lastName = ko.observable("last_name");
 
-	   this.fullName = ko.computed(function() {
-	       return this.firstName() + " " + this.lastName();    
-	   }, this);
+	      this.seeUser = function userData(){
+	           var json = 
+	               {
+	                   "cover_status":true,
+	                   "first_name":"Ricky",
+	                   "id":"rec_cdf02f39dsj678levd8g",
+	                   "last_name":"Port",
+	                   "period_covered":"120",
+	                   "xata":{"version":4}
+	           }
 
-	   this.seeUser = function userData(){
-            var json = 
-                {
-                    "cover_status":true,
-                    "first_name":"Ricky",
-                    "id":"rec_cdf02f39dsj678levd8g",
-                    "last_name":"Port",
-                    "period_covered":"120",
-                    "xata":{"version":4}
-            }
-            alert(`${json.first_name}, you are covered! and are eligible for cashback!`);
-        }  
-	}
+	           if (`${json.period_covered}` >= parseInt(90))  {
+	               alert(`${json.first_name}, you are covered! and are eligible for cashback!`);
+	           }
 
-	// Activates knockout.js
-	ko.applyBindings(new AppViewModel());
+	           else{
+	               alert(`Sorry, ${json.first_name}, you are not covered`)
+	           }
+	           
+	       }  
+	   }
+
+	   // Activates knockout.js
+	   ko.applyBindings(new OurViewModel());
 	</script>
 </body>
 </html>

@@ -41,4 +41,9 @@ The technologies used this far:
 ## Contribution
 If you would like to contribute to this project,feel free.
 
+## Deployment on Netlify
+
+[App on Netlify](https://6363d05b68664d004e28c83e--dynamic-florentine-364099.netlify.app/)
+
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
