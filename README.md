@@ -7,13 +7,13 @@ Flex is an insurance project that can help you get cashbacks if you spend money 
 ## Technologies
 The technologies used this far:
 * HTML
-* CSS (jQuery v3.3.1, mdBootstrap)
 * JavaScript
 * Node.js 16.13 or later
-* Express.JS
 * Git
 * GitHub
 * Xata
+* Cloudinary
+* Knockout.js
 
 ## Environment
 * Linux OS
@@ -37,5 +37,8 @@ The technologies used this far:
     - install dotenv
     - add code to access your API key from your .env file (add a variable with process.env) 
 * Query the database - use the Xata web interface to generate queries (I used Javascript and Fetch)
+
+## Contribution
+If you would like to contribute to this project,feel free.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
