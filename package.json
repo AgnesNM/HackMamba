@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@xata.io/client": "^0.20.0",
+    "@xata.io/client": "^0.20.2",
     "cloudinary": "^1.32.0",
     "dotenv": "^16.0.3"
   }

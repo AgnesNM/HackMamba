@@ -15,11 +15,23 @@
 	<script>
 	      
 	   function OurViewModel() {
-	      this.firstName = ko.observable("first_name");
-	      this.lastName = ko.observable("last_name");
+	      this.firstName = ko.observable("Ricky");
+	      this.lastName = ko.observable("Port");
 
 	      this.seeUser = function userData(){
-	           var json = 
+				let period_covered = Math.floor(Math.random() * 366);
+
+				if (`${period_covered}` >= 90)  {
+					alert(`${this.firstName()}, you are covered! and are eligible for cashback!`);
+				}
+
+				else{
+					alert(`Sorry, ${this.firstName()}, you are not covered`)
+				}
+
+				// this is the json data derived from the Xata database response
+
+				var json = 
 	               {
 	                   "cover_status":true,
 	                   "first_name":"Ricky",
@@ -28,16 +40,8 @@
 	                   "period_covered":"120",
 	                   "xata":{"version":4}
 	           }
-
-	           if (`${json.period_covered}` >= parseInt(90))  {
-	               alert(`${json.first_name}, you are covered! and are eligible for cashback!`);
-	           }
-
-	           else{
-	               alert(`Sorry, ${json.first_name}, you are not covered`)
-	           }
 	           
-	       }  
+	    	}  
 	   }
 
 	   // Activates knockout.js
