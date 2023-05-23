@@ -1,3 +1,19 @@
+const express = require("express");
+const serverless = require("serverless-http");
+
+const app = express();
+
+const router = express.Router();
+
+router.get("/", (req, res) => {
+  res.json({
+    hello: "hi!"
+  });
+});
+
+
+app.use(`/.netlify/functions/api`, router);
+
 const fs = require("fs");
 require("dotenv").config();
 let cloudinary = require('cloudinary').v2;
@@ -58,3 +74,7 @@ fetch('https://agnesnduta-mqqqgp.us-east-1.xata.sh/db/HackMambaTest:main/tables/
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
+
+
+  module.exports = app;
+  module.exports.handler = serverless(app);
